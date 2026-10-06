@@ -45,6 +45,12 @@ Si una carpeta no tiene `galeria-1`, el encabezado de la ficha de 12 m usa `port
 `hs-1`, `hs-2`, `hs-3` en `.mp4` y `.webm` (se reproducen en ese orden, en bucle) y `hs-1-poster.jpg`
 (primer cuadro, se muestra mientras carga).
 
+## Intro de la primera visita — `public/video/`
+
+`intro.mp4` y `intro.webm` (con sonido; arranca silenciado y se puede activar) e `intro-poster.jpg` (primer cuadro).
+Se ve una vez por sesión, al entrar por la home; después el telón sube y aparece el sitio.
+El final del video debería mostrar el logo centrado: en celulares se ve la franja central del cuadro.
+
 ## Logo — `src/assets/brand/`
 
 | Archivo | Uso |

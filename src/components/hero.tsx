@@ -5,12 +5,14 @@ import { motion, useReducedMotion, useScroll, useTransform } from "motion/react"
 import { useRef } from "react";
 import { HeroVideos } from "./hero-videos";
 import { Icon } from "./icons";
+import { useIntroDone } from "./intro";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
 export function Hero() {
   const ref = useRef<HTMLElement>(null);
   const reduce = useReducedMotion();
+  const ready = useIntroDone();
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const videoY = useTransform(scrollYProgress, [0, 1], ["0%", reduce ? "0%" : "18%"]);
   const contentOpacity = useTransform(scrollYProgress, [0, 0.6], [1, reduce ? 1 : 0]);
@@ -30,7 +32,7 @@ export function Hero() {
         <motion.p
           className="eyebrow mb-6 flex items-center gap-4 text-white/70"
           initial={reduce ? false : { opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
+          animate={ready ? { opacity: 1, x: 0 } : undefined}
           transition={{ duration: 1, ease, delay: 0.2 }}
         >
           <span className="h-px w-10 bg-brand" />
@@ -43,7 +45,7 @@ export function Hero() {
               <motion.span
                 className="block"
                 initial={reduce ? false : { y: "105%" }}
-                animate={{ y: 0 }}
+                animate={ready ? { y: 0 } : undefined}
                 transition={{ duration: 1.1, ease, delay: 0.35 + i * 0.12 }}
               >
                 {line}
@@ -54,7 +56,7 @@ export function Hero() {
 
         <motion.div
           initial={reduce ? false : { opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={ready ? { opacity: 1, y: 0 } : undefined}
           transition={{ duration: 1, ease, delay: 0.9 }}
         >
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-white/75 md:text-xl">

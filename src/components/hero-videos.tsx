@@ -2,6 +2,7 @@
 
 import { useReducedMotion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
+import { useIntroDone } from "./intro";
 
 // Reproduce los videos del hero uno tras otro, en bucle, con fundido entre ellos.
 // PLAYBACK_RATE acelera los clips (1 = velocidad original).
@@ -15,6 +16,7 @@ export function HeroVideos({ className = "" }: { className?: string }) {
   const [active, setActive] = useState(0);
   const reduced = useReducedMotion() ?? false;
   const visible = useRef(true);
+  const ready = useIntroDone();
 
   // Reproducir el clip activo; los demás quedan en pausa y listos desde el inicio
   useEffect(() => {
@@ -25,7 +27,8 @@ export function HeroVideos({ className = "" }: { className?: string }) {
       v.playbackRate = PLAYBACK_RATE;
       if (i === active) {
         v.currentTime = 0;
-        if (visible.current) v.play().catch(() => {});
+        if (!ready) v.pause();
+        else if (visible.current) v.play().catch(() => {});
       } else {
         // se pausa recién cuando terminó el fundido
         window.setTimeout(() => v.pause(), FADE_MS);
@@ -37,7 +40,7 @@ export function HeroVideos({ className = "" }: { className?: string }) {
       next.preload = "auto";
       next.load();
     }
-  }, [active, reduced]);
+  }, [active, reduced, ready]);
 
   // Pausar cuando el hero sale de pantalla
   useEffect(() => {
@@ -47,12 +50,12 @@ export function HeroVideos({ className = "" }: { className?: string }) {
       visible.current = e.isIntersecting;
       const v = refs.current[active];
       if (!v) return;
-      if (e.isIntersecting) v.play().catch(() => {});
+      if (e.isIntersecting && ready) v.play().catch(() => {});
       else v.pause();
     });
     io.observe(el);
     return () => io.disconnect();
-  }, [active, reduced]);
+  }, [active, reduced, ready]);
 
   return (
     <div className={`relative h-full w-full ${className}`}>

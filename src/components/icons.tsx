@@ -26,7 +26,10 @@ import {
   Phone,
   Ruler,
   ShieldCheck,
+  SkipForward,
   Snowflake,
+  SpeakerHigh,
+  SpeakerSlash,
   SquaresFour,
   Stack,
   Television,
@@ -80,6 +83,9 @@ const icons = {
   mail: EnvelopeSimple,
   instagram: InstagramLogo,
   linkedin: LinkedinLogo,
+  skip: SkipForward,
+  soundOn: SpeakerHigh,
+  soundOff: SpeakerSlash,
 } satisfies Record<string, PhosphorIcon>;
 
 // Íconos de Lucide donde el dibujo de Phosphor no convence (la cama de Phosphor, de perfil, se lee poco).
@@ -95,7 +101,7 @@ const STROKE: Record<IconWeight, number> = { thin: 0.75, light: 1.125, regular: 
 export type IconName = keyof typeof icons | keyof typeof lucideIcons;
 
 // Trazo fino ("light") para el estilo premium; flechas y controles un poco más firmes.
-const regular: IconName[] = ["arrow", "arrowLeft", "menu", "close"];
+const regular: IconName[] = ["arrow", "arrowLeft", "menu", "close", "skip", "soundOn", "soundOff"];
 
 export function Icon({ name, className = "size-6", weight }: { name: IconName; className?: string; weight?: IconWeight }) {
   const w = weight ?? (regular.includes(name) ? "regular" : "light");

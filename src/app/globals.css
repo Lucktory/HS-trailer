@@ -57,6 +57,18 @@ body {
 }
 
 /* Blueprint grid used behind technical sections */
+/* Intro de la primera visita (ver src/lib/intro.ts) */
+#intro {
+  display: none;
+}
+html[data-intro="on"] #intro,
+html[data-intro="leaving"] #intro {
+  display: block;
+}
+html[data-intro="on"] {
+  overflow: hidden;
+}
+
 .blueprint-grid {
   background-image:
     linear-gradient(to right, rgb(255 255 255 / 0.04) 1px, transparent 1px),

@@ -3,6 +3,7 @@ import { Mona_Sans } from "next/font/google";
 import { Footer, WhatsAppFloat } from "@/components/footer";
 import { Header } from "@/components/header";
 import { SmoothScroll } from "@/components/smooth-scroll";
+import { introScript } from "@/lib/intro";
 import { baseOpenGraph, site } from "@/lib/site";
 import "./globals.css";
 
@@ -47,7 +48,11 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="es-AR" className={mona.variable}>
+    // suppressHydrationWarning: el script del <head> agrega data-intro a <html> antes de React
+    <html lang="es-AR" className={mona.variable} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: introScript }} />
+      </head>
       <body className="grain min-h-dvh">
         <SmoothScroll />
         <Header />
