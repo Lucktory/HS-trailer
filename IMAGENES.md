@@ -36,8 +36,9 @@ Si una carpeta no tiene `galeria-1`, el encabezado de la ficha de 12 m usa `port
 
 | Archivo | Dónde se ve | Tamaño recomendado |
 |---|---|---|
+| `equipamiento.jpg` | Sección "Preparados para el clima más exigente" (al lado de la lista de equipamiento) | 1200 × 1500 px (vertical) |
 | `servicio.jpg` | Banda "Más que un alquiler" (a la derecha) y vista previa al compartir el link | 1600 × 1200 px |
-| `nosotros.jpg` | "Por qué elegirnos": foto en diagonal del panel azul (en celular, debajo del título). Hoy es un cuadro del video `hs-3`; mejor una foto real con el tráiler al centro | 1600 × 1200 px |
+| `nosotros.jpg` | "Por qué elegirnos": foto en diagonal del panel azul (en celular, debajo del título). Hoy es la cocina de la vivienda (foto de Alejandro); sin trailers con ruedas | 1200 × 1500 px |
 | `contacto.jpg` | Fondo de la sección de contacto (queda oscurecido) | 2400 × 1350 px |
 
 ## Videos del hero — `public/video/`

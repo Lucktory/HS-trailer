@@ -6,7 +6,7 @@ import { FloorPlan } from "@/components/floor-plan";
 import { Gallery } from "@/components/gallery";
 import { Icon, WhatsAppIcon } from "@/components/icons";
 import { Reveal } from "@/components/motion";
-import { CatalogCard, SectionHeading } from "@/components/ui";
+import { CatalogCard, IconTile, SectionHeading } from "@/components/ui";
 import { LENGTH, WIDTH, catalog, catalogId, documentation, getVariant, spaceOf, units } from "@/lib/fleet";
 import { coverFor, galleryOf } from "@/lib/images";
 import { baseOpenGraph, whatsappLink } from "@/lib/site";
@@ -151,11 +151,7 @@ export default async function ModelPage(props: PageProps<"/flota/[id]">) {
               {variant.specs.map((g, i) => (
                 <Reveal key={g.title} delay={(i % 2) * 0.08} className="border border-ink/[0.07] bg-white p-7 md:p-8">
                   <div className="flex items-center gap-5">
-                    <span className="relative grid size-14 shrink-0 place-items-center bg-gradient-to-br from-navy to-navy-900 text-white shadow-[0_10px_24px_-10px_rgb(15_31_56/0.7)]">
-                      <span className="absolute -top-px -left-px size-2.5 border-t-2 border-l-2 border-brand" />
-                      <span className="absolute -right-px -bottom-px size-2.5 border-r-2 border-b-2 border-brand" />
-                      <Icon name={g.icon} weight="duotone" className="size-7" />
-                    </span>
+                    <IconTile name={g.icon} />
                     <h3 className="display text-2xl font-semibold text-ink">{g.title}</h3>
                   </div>
                   <ul className="mt-6 space-y-2.5 text-ink/70">

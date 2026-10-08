@@ -2,8 +2,19 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import type { CatalogItem, Feature, Size, SpaceId } from "@/lib/fleet";
-import { Icon } from "./icons";
+import { Icon, type IconName } from "./icons";
 import { Reveal } from "./motion";
+
+// Ícono en baldosa navy con esquinas rojas (especificaciones de las fichas y equipamiento de la home)
+export function IconTile({ name }: { name: IconName }) {
+  return (
+    <span className="relative grid size-14 shrink-0 place-items-center bg-gradient-to-br from-navy to-navy-900 text-white shadow-[0_10px_24px_-10px_rgb(15_31_56/0.7)]">
+      <span className="absolute -top-px -left-px size-2.5 border-t-2 border-l-2 border-brand" />
+      <span className="absolute -right-px -bottom-px size-2.5 border-r-2 border-b-2 border-brand" />
+      <Icon name={name} weight="duotone" className="size-7" />
+    </span>
+  );
+}
 
 // tone = color del fondo sobre el que va el título
 export function SectionHeading({

@@ -9,7 +9,7 @@ import { FloorPlan } from "./floor-plan";
 import { Icon, WhatsAppIcon, type IconName } from "./icons";
 import { Reveal, ZoomIn } from "./motion";
 import { QuoteForm } from "./quote-form";
-import { SectionHeading } from "./ui";
+import { IconTile, SectionHeading } from "./ui";
 
 type Item = { icon: IconName; title: string; text: string };
 
@@ -109,6 +109,63 @@ export function Fleet() {
             </div>
           </a>
         </Reveal>
+      </div>
+    </section>
+  );
+}
+
+/* ---------- Equipamiento (texto del cliente) ---------- */
+
+// Lo que traen los trailers en general, según Alejandro. La cocina depende del módulo (el pañol no tiene).
+const equipment: Item[] = [
+  { icon: "snowflake", title: "Aire acondicionado frío/calor", text: "Confort en los ambientes durante todo el año." },
+  { icon: "heat", title: "Calefactores eléctricos", text: "Calefacción adicional para el invierno patagónico." },
+  { icon: "window", title: "Máxima aislación térmica", text: "Aberturas herméticas con DVH (doble vidriado hermético) y pisos de excelente calidad." },
+  { icon: "bolt", title: "Instalación eléctrica reglamentaria", text: "Con plano unifilar firmado por matriculado." },
+  { icon: "drop", title: "Agua fría y caliente", text: "Sistema de agua con recirculación." },
+  { icon: "oven", title: "Cocina equipada", text: "Heladera, microondas, anafe y horno eléctricos, según el módulo." },
+];
+
+export function Equipment() {
+  return (
+    <section id="equipamiento" className="scroll-mt-20 bg-white py-24 md:py-32">
+      <div className="container-x">
+        <div className="flex flex-wrap items-end justify-between gap-x-16 gap-y-6">
+          <SectionHeading eyebrow="Equipamiento" title="Preparados para el clima más exigente" />
+          <Reveal className="max-w-md">
+            <p className="text-lg leading-relaxed text-ink/60">
+              Trailers adaptados a las necesidades de la industria, con climatización, aislación y servicios listos para operar.
+            </p>
+          </Reveal>
+        </div>
+        <div className="mt-14 grid gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
+          {/* Foto real de un interior; en escritorio acompaña el alto de la lista */}
+          <div className="relative aspect-[4/3] overflow-hidden bg-ink lg:aspect-auto">
+            <ZoomIn className="absolute inset-0">
+              <Image
+                src={versioned("/img/secciones/equipamiento.jpg")}
+                alt="Interior de un tráiler HS con aire acondicionado, aberturas con DVH y piso de madera"
+                fill
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                className="object-cover"
+              />
+            </ZoomIn>
+            <span className="absolute top-0 left-0 size-5 border-t-2 border-l-2 border-brand" />
+            <span className="absolute right-0 bottom-0 size-5 border-r-2 border-b-2 border-brand" />
+          </div>
+          <ul className="border-t border-ink/10">
+            {equipment.map((e, i) => (
+              <Reveal as="li" key={e.title} delay={i * 0.05} className="flex items-center gap-6 border-b border-ink/10 py-6">
+                <IconTile name={e.icon} />
+                <div className="min-w-0 flex-1">
+                  <p className="display text-lg font-semibold text-ink md:text-xl">{e.title}</p>
+                  <p className="mt-1 text-ink/60">{e.text}</p>
+                </div>
+                <span className="tabular hidden font-display text-xs font-semibold tracking-[0.2em] text-ink/30 sm:block">0{i + 1}</span>
+              </Reveal>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );

@@ -524,15 +524,17 @@ export const companyMan12: Plan = {
     { id: "oficina", label: "Oficina y sala de reuniones", x: 800, y: 0, w: 400, h: 244, mx: 1050, my: 180, items: ["2 escritorios con sillas ergonómicas", "Mesa de reuniones para 4", "TV Smart 55\" y pizarra", "Biblioteca y archivero con llave"] },
   ],
   shapes: [
-    // Muros interiores
+    // Muros interiores. Nicho de la heladera en la esquina del baño, abierto hacia la cocina (indicación de Alejandro)
     { t: "wall", x1: 290, y1: 0, x2: 290, y2: 160 },
-    { t: "wall", x1: 510, y1: 0, x2: 510, y2: 150 },
+    { t: "wall", x1: 510, y1: 0, x2: 510, y2: 88 },
     { t: "wall", x1: 290, y1: 150, x2: 510, y2: 150 },
-    // Puertas
+    { t: "wall", x1: 450, y1: 88, x2: 510, y2: 88 },
+    { t: "wall", x1: 450, y1: 88, x2: 450, y2: 150 },
+    // Puertas: la entrada da al pasillo, junto al baño
     { t: "door", x: 290, y: 240, w: 76, to: "left" },
     { t: "door", x: 380, y: 150, w: 64, to: "up" },
-    { t: "gap", x: 800, y: 239, w: 90, h: 10 },
-    { t: "door", x: 800, y: 244, w: 90, to: "down" },
+    { t: "gap", x: 410, y: 239, w: 90, h: 10 },
+    { t: "door", x: 410, y: 244, w: 90, to: "down" },
     // Ventanas
     { t: "window", x: 90, y: 0, w: 110 },
     { t: "window", x: 90, y: 244, w: 110 },
@@ -551,10 +553,11 @@ export const companyMan12: Plan = {
     ...toilet(330, 0),
     { t: "circle", cx: 380, cy: 30, r: 13 },
     ...sink(296, 98, 50, 44),
+    // Heladera en el nicho
+    { t: "rect", x: 455, y: 93, w: 52, h: 54, fill: true },
     // Cocina-comedor
-    { t: "rect", x: 516, y: 6, w: 150, h: 60 },
+    { t: "rect", x: 516, y: 6, w: 214, h: 60 },
     { t: "circle", cx: 556, cy: 36, r: 13 },
-    { t: "rect", x: 672, y: 6, w: 58, h: 60, fill: true },
     { t: "circle", cx: 764, cy: 34, r: 24 },
     { t: "rect", x: 611, y: 170, w: 110, h: 70 },
     chair(626, 130, 34, 34),
