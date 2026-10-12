@@ -15,7 +15,7 @@ export const vivienda12: Plan = {
       y: 0,
       w: 300,
       h: 244,
-      items: ["2 camas individuales", "Armario con llave", "2 paneles calefactores de 2500 a 3000 W", "Aire acondicionado 3500 frigorías"],
+      items: ["2 camas individuales", "Armario con llave", "2 calefactores eléctricos", "Aire acondicionado 3500 frigorías"],
     },
     {
       id: "bano",
@@ -24,7 +24,7 @@ export const vivienda12: Plan = {
       y: 0,
       w: 260,
       h: 150,
-      items: ["Inodoro y bidet", "Lavamanos con espejo", "Ducha (receptáculo 90 cm)", "Panel calefactor de 2500 a 3000 W"],
+      items: ["Inodoro y bidet", "Lavamanos con espejo", "Ducha (receptáculo 90 cm)", "Calefactor eléctrico"],
     },
     {
       id: "cocina",
@@ -44,7 +44,7 @@ export const vivienda12: Plan = {
       y: 0,
       w: 300,
       h: 244,
-      items: ["2 camas individuales", "Armario con llave", "2 paneles calefactores de 2500 a 3000 W", "Aire acondicionado 3500 frigorías"],
+      items: ["2 camas individuales", "Armario con llave", "2 calefactores eléctricos", "Aire acondicionado 3500 frigorías"],
     },
   ],
   shapes: [
@@ -191,7 +191,7 @@ export const oficina12: Plan = {
       h: 94,
       mx: 600,
       my: 172,
-      items: ["3 muebles biblioteca de melamina", "Dispenser frío / calor", "2 aires acondicionados 3500 frigorías", "2 paneles calefactores de 2500 a 3000 W"],
+      items: ["3 muebles biblioteca de melamina", "Dispenser frío / calor", "2 aires acondicionados 3500 frigorías", "2 calefactores eléctricos"],
     },
   ],
   shapes: [
@@ -275,7 +275,7 @@ export const comedor6: Plan = {
   width: 244,
   zones: [
     { id: "cocina", label: "Cocina", x: 0, y: 0, w: 110, h: 244, mx: 90, my: 60, items: ["Mesada con alacena y pileta de acero inoxidable", "Heladera con freezer", "Termotanque 40 L", "Dispenser frío / calor"] },
-    { id: "comedor", label: "Comedor 12 personas", x: 110, y: 0, w: 490, h: 244, items: ["Mesa de melamina y 12 sillas", "Aire acondicionado 3500 frigorías", "Panel calefactor de 2500 a 3000 W", "TV Smart 55\" con soporte"] },
+    { id: "comedor", label: "Comedor 12 personas", x: 110, y: 0, w: 490, h: 244, items: ["Mesa de melamina y 12 sillas", "Aire acondicionado 3500 frigorías", "Calefactor eléctrico", "TV Smart 55\" con soporte"] },
   ],
   shapes: [
     { t: "gap", x: 80, y: 239, w: 90, h: 10 },
@@ -384,10 +384,10 @@ export const bano12: Plan = {
   length: 1200,
   width: 244,
   zones: [
-    { id: "inodoros", label: "Inodoros y mingitorios", x: 0, y: 0, w: 360, h: 244, mx: 135, my: 180, items: ["4 inodoros en boxes con puerta", "4 mingitorios con separadores", "Extractor en cada box", "Panel calefactor de 2500 a 3000 W"] },
-    { id: "duchas", label: "Duchas y lavamanos", x: 360, y: 0, w: 360, h: 244, mx: 540, my: 178, items: ["4 duchas 90 × 90 cm con puerta", "Mesada con 5 bachas y espejos", "Dispensers de jabón y toallas", "Aire 3500 frigorías y panel de 2500 a 3000 W"] },
+    { id: "inodoros", label: "Inodoros y mingitorios", x: 0, y: 0, w: 360, h: 244, mx: 135, my: 180, items: ["4 inodoros en boxes con puerta", "4 mingitorios con separadores", "Extractor en cada box", "Calefactor eléctrico"] },
+    { id: "duchas", label: "Duchas y lavamanos", x: 360, y: 0, w: 360, h: 244, mx: 540, my: 178, items: ["4 duchas 90 × 90 cm con puerta", "Mesada con 5 bachas y espejos", "Dispensers de jabón y toallas", "Aire 3500 frigorías y calefactor eléctrico"] },
     { id: "tecnica", label: "Acceso y sala técnica", x: 720, y: 0, w: 130, h: 244, items: ["2 termotanques eléctricos de 150 L", "Ingreso principal", "Paso al vestuario"] },
-    { id: "vestuario", label: "Vestuario", x: 850, y: 0, w: 350, h: 244, mx: 1100, my: 180, items: ["2 lockers metálicos de 6 casilleros", "3 bancos y percheros", "Aire 3500 frigorías y 2 paneles de 2500 a 3000 W"] },
+    { id: "vestuario", label: "Vestuario", x: 850, y: 0, w: 350, h: 244, mx: 1100, my: 180, items: ["2 lockers metálicos de 6 casilleros", "3 bancos y percheros", "Aire 3500 frigorías y 2 calefactores eléctricos"] },
   ],
   shapes: [
     // Boxes de inodoro y de ducha
@@ -431,9 +431,9 @@ export const bano6: Plan = {
   width: 244,
   zones: [
     { id: "inodoros", label: "Inodoros y mingitorios", x: 0, y: 0, w: 180, h: 244, mx: 90, my: 182, items: ["2 inodoros en boxes con puerta", "2 mingitorios con separador", "Extractor en cada box"] },
-    { id: "duchas", label: "Duchas y lavamanos", x: 180, y: 0, w: 180, h: 244, mx: 270, my: 178, items: ["2 duchas 90 × 90 cm con puerta", "Mesada con 2 bachas y espejos", "Panel calefactor de 2500 a 3000 W"] },
+    { id: "duchas", label: "Duchas y lavamanos", x: 180, y: 0, w: 180, h: 244, mx: 270, my: 178, items: ["2 duchas 90 × 90 cm con puerta", "Mesada con 2 bachas y espejos", "Calefactor eléctrico"] },
     { id: "tecnica", label: "Acceso y sala técnica", x: 360, y: 0, w: 90, h: 244, items: ["Termotanque eléctrico de 150 L", "Ingreso principal", "Paso al vestuario"] },
-    { id: "vestuario", label: "Vestuario", x: 450, y: 0, w: 150, h: 244, items: ["Locker metálico de 6 casilleros", "Banco y percheros", "Aire 3500 frigorías y panel de 2500 a 3000 W"] },
+    { id: "vestuario", label: "Vestuario", x: 450, y: 0, w: 150, h: 244, items: ["Locker metálico de 6 casilleros", "Banco y percheros", "Aire 3500 frigorías y calefactor eléctrico"] },
   ],
   shapes: [
     { t: "wall", x1: 90, y1: 0, x2: 90, y2: 100 },
@@ -466,7 +466,7 @@ export const sum12: Plan = {
   width: 244,
   zones: [
     { id: "servicio", label: "Sector de servicio", x: 0, y: 0, w: 160, h: 244, items: ["Mesada con pileta y alacena", "Heladera con freezer y microondas", "Termotanque 40 L y dispenser"] },
-    { id: "salon", label: "Salón 24 personas", x: 160, y: 0, w: 1040, h: 244, items: ["6 mesas plegables y 24 sillas", "TV Smart 55\", pizarra y biblioteca", "2 aires acondicionados 3500 frigorías", "2 paneles calefactores de 2500 a 3000 W"] },
+    { id: "salon", label: "Salón 24 personas", x: 160, y: 0, w: 1040, h: 244, items: ["6 mesas plegables y 24 sillas", "TV Smart 55\", pizarra y biblioteca", "2 aires acondicionados 3500 frigorías", "2 calefactores eléctricos"] },
   ],
   shapes: [
     { t: "gap", x: 160, y: 239, w: 90, h: 10 },
@@ -500,7 +500,7 @@ export const sum6: Plan = {
   length: 600,
   width: 244,
   zones: [
-    { id: "salon", label: "Salón 10 personas", x: 0, y: 0, w: 600, h: 244, items: ["2 mesas plegables y 10 sillas", "TV Smart 55\" y pizarra", "Rincón de servicio: mesada, frigobar y dispenser", "Aire 3500 frigorías y panel calefactor de 2500 a 3000 W"] },
+    { id: "salon", label: "Salón 10 personas", x: 0, y: 0, w: 600, h: 244, items: ["2 mesas plegables y 10 sillas", "TV Smart 55\" y pizarra", "Rincón de servicio: mesada, frigobar y dispenser", "Aire 3500 frigorías y calefactor eléctrico"] },
   ],
   shapes: [
     { t: "gap", x: 30, y: 239, w: 90, h: 10 },
@@ -527,10 +527,10 @@ export const companyMan12: Plan = {
   length: 1200,
   width: 244,
   zones: [
-    { id: "oficina", label: "Oficina", x: 0, y: 0, w: 560, h: 244, items: ["3 escritorios con sillas ergonómicas", "Muebles de guardado y archivero", "Aire 3500 frigorías y panel de 2500 a 3000 W"] },
+    { id: "oficina", label: "Oficina", x: 0, y: 0, w: 560, h: 244, items: ["3 escritorios con sillas ergonómicas", "Muebles de guardado y archivero", "Aire 3500 frigorías y calefactor eléctrico"] },
     { id: "cocina", label: "Cocina", x: 560, y: 0, w: 181, h: 244, mx: 640, my: 200, items: ["Mesada con pileta y anafe", "Heladera con freezer", "Microondas y dispenser"] },
-    { id: "bano", label: "Baño completo", x: 741, y: 0, w: 99, h: 177, items: ["Ducha", "Inodoro y bidet", "Lavamanos con espejo", "Panel calefactor de 2500 a 3000 W"] },
-    { id: "dormitorio", label: "Dormitorio", x: 840, y: 0, w: 360, h: 244, items: ["Cama doble con colchón de 20 cm", "2 mesas de luz", "Placard", "Aire 3500 frigorías y 2 paneles de 2500 a 3000 W"] },
+    { id: "bano", label: "Baño completo", x: 741, y: 0, w: 99, h: 177, items: ["Ducha", "Inodoro y bidet", "Lavamanos con espejo", "Calefactor eléctrico"] },
+    { id: "dormitorio", label: "Dormitorio", x: 840, y: 0, w: 360, h: 244, items: ["Cama doble con colchón de 20 cm", "2 mesas de luz", "Placard", "Aire 3500 frigorías y 2 calefactores eléctricos"] },
   ],
   shapes: [
     // Muros interiores (plano de Alejandro)

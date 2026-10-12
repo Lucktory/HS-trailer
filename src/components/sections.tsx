@@ -119,7 +119,7 @@ export function Fleet() {
 // Lo que traen los trailers en general, según Alejandro. La cocina depende del módulo (el pañol no tiene).
 const equipment: Item[] = [
   { icon: "snowflake", title: "Aire acondicionado frío/calor", text: "Confort en los ambientes durante todo el año." },
-  { icon: "heat", title: "Calefactores eléctricos", text: "De 2500 a 3000 W, con 3 o 4 niveles de calor." },
+  { icon: "heat", title: "Calefactores eléctricos", text: "Con varios niveles de potencia." },
   { icon: "window", title: "Máxima aislación térmica", text: "Aberturas herméticas con DVH (doble vidriado hermético) y pisos de excelente calidad." },
   { icon: "bolt", title: "Instalación eléctrica reglamentaria", text: "Con plano unifilar firmado por matriculado." },
   { icon: "drop", title: "Agua fría y caliente", text: "Sistema de agua con recirculación." },
