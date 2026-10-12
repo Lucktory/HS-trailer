@@ -300,31 +300,40 @@ export const comedor6: Plan = {
 
 /* ---------- Tráiler Oficina 6 m: 4 puestos (2 módulos dobles) ---------- */
 
-const office6Desks: Shape[] = [];
-[80, 370].forEach((x) => {
-  office6Desks.push(
-    { t: "rect", x, y: 8, w: 130, h: 120 },
-    { t: "line", x1: x + 65, y1: 8, x2: x + 65, y2: 128 },
-    chair(x - 44, 40, 36, 40),
-    chair(x + 138, 40, 36, 40),
-  );
-});
-
+// Plano de Alejandro: 2 escritorios (uno con 2 sillas de visita), kitchenette y baño; puerta en el testero
 export const oficina6: Plan = {
   length: 600,
   width: 244,
   zones: [
-    { id: "puestos", label: "Puestos de trabajo", x: 0, y: 0, w: 600, h: 150, items: ["4 escritorios de melamina", "4 sillas ergonómicas", "TV Smart 55\" con soporte"] },
-    { id: "guardado", label: "Guardado y confort", x: 0, y: 150, w: 600, h: 94, items: ["Mueble biblioteca de melamina", "Dispenser frío / calor", "Aire acondicionado 3500 frigorías", "Panel calefactor 550W"] },
+    { id: "puestos", label: "Oficina", x: 0, y: 0, w: 378, h: 244, items: ["2 escritorios de melamina", "2 sillas ergonómicas y 2 sillas de visita", "Mueble de guardado"] },
+    { id: "kitchenette", label: "Kitchenette", x: 378, y: 0, w: 99, h: 244, my: 170, items: ["Mesada con pileta y anafe", "Alacena"] },
+    { id: "bano", label: "Baño", x: 477, y: 0, w: 123, h: 114, mx: 578, my: 88, items: ["Inodoro", "Lavamanos"] },
   ],
   shapes: [
-    { t: "gap", x: 300, y: 239, w: 86, h: 10 },
-    { t: "door", x: 300, y: 244, w: 86, to: "down" },
+    // Baño
+    { t: "wall", x1: 477, y1: 0, x2: 477, y2: 114 },
+    { t: "wall", x1: 477, y1: 114, x2: 600, y2: 114 },
+    { t: "door", x: 492, y: 114, w: 60, to: "up" },
+    ...sink(490, 4, 50, 36),
+    { t: "rect", x: 560, y: 4, w: 34, h: 14 },
+    { t: "circle", cx: 577, cy: 40, r: 16 },
+    // Puerta de entrada en el testero
+    { t: "gap", x: 595, y: 130, w: 10, h: 90 },
+    { t: "door", x: 600, y: 220, w: 90, to: "left" },
     { t: "window", x: 60, y: 244, w: 120 },
-    ...office6Desks,
-    { t: "rect", x: 400, y: 200, w: 150, h: 38 },
-    { t: "rect", x: 560, y: 204, w: 28, h: 32 },
-    { t: "rect", x: 588, y: 60, w: 8, h: 84, fill: true },
+    // Puesto 1: escritorio, silla contra el muro y 2 sillas de visita
+    { t: "rect", x: 4, y: 4, w: 34, h: 46 },
+    { t: "rect", x: 2, y: 67, w: 147, h: 63 },
+    chair(60, 20, 40, 40),
+    chair(12, 148, 50, 50),
+    chair(84, 148, 50, 50),
+    // Puesto 2: escritorio contra el muro superior
+    { t: "rect", x: 309, y: 4, w: 66, h: 123 },
+    chair(258, 42, 40, 40),
+    // Kitchenette
+    { t: "rect", x: 380, y: 4, w: 40, h: 112 },
+    { t: "circle", cx: 400, cy: 40, r: 11 },
+    { t: "rect", x: 388, y: 70, w: 24, h: 34 },
   ],
 };
 
@@ -518,63 +527,53 @@ export const companyMan12: Plan = {
   length: 1200,
   width: 244,
   zones: [
-    { id: "dormitorio", label: "Dormitorio", x: 0, y: 0, w: 290, h: 244, items: ["2 camas individuales con colchón de 20 cm", "2 armarios con llave", "Aire 3500 frigorías y 2 paneles 550W", "TV Smart 55\" y cortina blackout"] },
-    { id: "bano", label: "Baño completo", x: 290, y: 0, w: 220, h: 150, items: ["Inodoro y bidet", "Lavamanos con espejo", "Ducha (receptáculo 90 cm)", "Panel calefactor 550W"] },
-    { id: "cocina", label: "Cocina / Comedor", x: 510, y: 0, w: 290, h: 244, mx: 740, my: 120, items: ["Mesada con pileta de acero inoxidable", "Heladera con freezer y microondas", "Mesa y 4 sillas", "Termotanque 40 L y dispenser"] },
-    { id: "oficina", label: "Oficina y sala de reuniones", x: 800, y: 0, w: 400, h: 244, mx: 1050, my: 180, items: ["2 escritorios con sillas ergonómicas", "Mesa de reuniones para 4", "TV Smart 55\" y pizarra", "Biblioteca y archivero con llave"] },
+    { id: "oficina", label: "Oficina", x: 0, y: 0, w: 560, h: 244, items: ["3 escritorios con sillas ergonómicas", "Muebles de guardado y archivero", "Aire 3500 frigorías y panel 550W"] },
+    { id: "cocina", label: "Cocina", x: 560, y: 0, w: 181, h: 244, mx: 640, my: 200, items: ["Mesada con pileta y anafe", "Heladera con freezer", "Microondas y dispenser"] },
+    { id: "bano", label: "Baño completo", x: 741, y: 0, w: 99, h: 177, items: ["Ducha", "Inodoro y bidet", "Lavamanos con espejo", "Panel calefactor 550W"] },
+    { id: "dormitorio", label: "Dormitorio", x: 840, y: 0, w: 360, h: 244, items: ["Cama doble con colchón de 20 cm", "2 mesas de luz", "Placard", "Aire 3500 frigorías y 2 paneles 550W"] },
   ],
   shapes: [
-    // Muros interiores. Nicho de la heladera en la esquina del baño, abierto hacia la cocina (indicación de Alejandro)
-    { t: "wall", x1: 290, y1: 0, x2: 290, y2: 160 },
-    { t: "wall", x1: 510, y1: 0, x2: 510, y2: 88 },
-    { t: "wall", x1: 290, y1: 150, x2: 510, y2: 150 },
-    { t: "wall", x1: 450, y1: 88, x2: 510, y2: 88 },
-    { t: "wall", x1: 450, y1: 88, x2: 450, y2: 150 },
-    // Puertas: la entrada da al pasillo, junto al baño
-    { t: "door", x: 290, y: 240, w: 76, to: "left" },
-    { t: "door", x: 380, y: 150, w: 64, to: "up" },
-    { t: "gap", x: 410, y: 239, w: 90, h: 10 },
-    { t: "door", x: 410, y: 244, w: 90, to: "down" },
+    // Muros interiores (plano de Alejandro)
+    { t: "wall", x1: 560, y1: 0, x2: 560, y2: 182 },
+    { t: "wall", x1: 741, y1: 0, x2: 741, y2: 177 },
+    { t: "wall", x1: 840, y1: 0, x2: 840, y2: 177 },
+    { t: "wall", x1: 741, y1: 177, x2: 840, y2: 177 },
+    // Puertas: una entrada a la oficina y otra a la vivienda, ambas en el muro superior
+    { t: "gap", x: 420, y: -5, w: 80, h: 10 },
+    { t: "door", x: 420, y: 0, w: 80, to: "down" },
+    { t: "gap", x: 597, y: -5, w: 72, h: 10 },
+    { t: "door", x: 597, y: 0, w: 72, to: "down" },
+    { t: "door", x: 795, y: 177, w: 45, to: "down" },
     // Ventanas
-    { t: "window", x: 90, y: 0, w: 110 },
-    { t: "window", x: 90, y: 244, w: 110 },
-    { t: "window", x: 440, y: 0, w: 50 },
-    { t: "window", x: 540, y: 0, w: 90 },
-    { t: "window", x: 590, y: 244, w: 90 },
-    { t: "window", x: 1010, y: 0, w: 100 },
-    // Dormitorio: 2 camas, mesa de luz compartida, 2 armarios
-    ...bed(5, 8),
-    ...bed(5, 156),
-    { t: "rect", x: 8, y: 102, w: 40, h: 40 },
-    { t: "rect", x: 238, y: 8, w: 48, h: 110 },
-    { t: "line", x1: 262, y1: 8, x2: 262, y2: 118 },
-    // Baño: ducha, inodoro, bidet, lavamanos
-    ...shower(422, 6, 82),
-    ...toilet(330, 0),
-    { t: "circle", cx: 380, cy: 30, r: 13 },
-    ...sink(296, 98, 50, 44),
-    // Heladera en el nicho
-    { t: "rect", x: 455, y: 93, w: 52, h: 54, fill: true },
-    // Cocina-comedor
-    { t: "rect", x: 516, y: 6, w: 214, h: 60 },
-    { t: "circle", cx: 556, cy: 36, r: 13 },
-    { t: "circle", cx: 764, cy: 34, r: 24 },
-    { t: "rect", x: 611, y: 170, w: 110, h: 70 },
-    chair(626, 130, 34, 34),
-    chair(676, 130, 34, 34),
-    chair(573, 188, 32, 34),
-    chair(727, 188, 32, 34),
-    { t: "rect", x: 766, y: 200, w: 30, h: 36 },
-    // Oficina: escritorios contra el testero, mesa de reuniones, biblioteca, archivero, TV y pizarra
-    { t: "rect", x: 1134, y: 10, w: 60, h: 105 },
-    chair(1092, 45, 36, 36),
-    { t: "rect", x: 1134, y: 129, w: 60, h: 105 },
-    chair(1092, 163, 36, 36),
-    { t: "rect", x: 900, y: 46, w: 120, h: 80 },
-    ...[913, 967].flatMap((x) => [chair(x, 6, 34, 32), chair(x, 134, 34, 32)]),
-    { t: "rect", x: 812, y: 6, w: 60, h: 34 },
-    { t: "rect", x: 1030, y: 6, w: 44, h: 32 },
-    { t: "rect", x: 930, y: 230, w: 80, h: 8, fill: true },
-    { t: "rect", x: 1020, y: 230, w: 70, h: 8, fill: true },
+    { t: "window", x: 72, y: 244, w: 236 },
+    { t: "window", x: 400, y: 244, w: 98 },
+    { t: "window", x: 650, y: 244, w: 80 },
+    { t: "window", x: 937, y: 244, w: 223 },
+    // Oficina: 3 puestos, guardado y archivo
+    { t: "rect", x: 105, y: 6, w: 180, h: 54 },
+    chair(176, 66, 38, 38),
+    { t: "rect", x: 112, y: 186, w: 150, h: 54 },
+    chair(170, 142, 38, 38),
+    { t: "rect", x: 345, y: 110, w: 64, h: 86 },
+    chair(300, 134, 38, 38),
+    { t: "rect", x: 290, y: 6, w: 120, h: 36 },
+    { t: "rect", x: 6, y: 90, w: 40, h: 70 },
+    { t: "rect", x: 6, y: 186, w: 50, h: 52 },
+    { t: "rect", x: 270, y: 200, w: 70, h: 40 },
+    // Cocina: mesada con pileta y anafe, heladera
+    { t: "rect", x: 680, y: 18, w: 58, h: 112 },
+    { t: "circle", cx: 709, cy: 46, r: 12 },
+    { t: "rect", x: 694, y: 80, w: 30, h: 36 },
+    { t: "rect", x: 680, y: 132, w: 58, h: 40, fill: true },
+    // Baño: ducha, inodoro, lavamanos
+    ...shower(745, 6, 90),
+    { t: "circle", cx: 790, cy: 120, r: 15 },
+    ...sink(745, 130, 40, 40),
+    // Dormitorio: placard, cama doble con cabecera a la derecha y 2 mesas de luz
+    { t: "rect", x: 846, y: 6, w: 84, h: 165 },
+    { t: "line", x1: 846, y1: 88, x2: 930, y2: 88 },
+    ...bed(990, 66, 190, 130, true),
+    { t: "rect", x: 1146, y: 20, w: 46, h: 40 },
+    { t: "rect", x: 1146, y: 202, w: 46, h: 38 },
   ],
 };
