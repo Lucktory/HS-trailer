@@ -35,7 +35,7 @@ Todo lo de esta lista debe revisarse con Alejandro antes de publicar.
 
 | Unidad | En el sitio | La otra versión del PDF |
 |---|---|---|
-| **Vivienda 12 m – calefacción** | "2 paneles calefactores 550W por dormitorio" y "2 aires (1 por dormitorio)". | La ficha (p. 5) dice "2 paneles" sin aclarar si es por dormitorio o en total; el plano (p. 4) dibuja al menos 2 por dormitorio. |
+| **Vivienda 12 m – calefacción** | "2 paneles calefactores de 2500 a 3000 W por dormitorio" y "2 aires (1 por dormitorio)". | La ficha (p. 5) dice "2 paneles" sin aclarar si es por dormitorio o en total; el plano (p. 4) dibuja al menos 2 por dormitorio. |
 | **Vivienda 12 m – TV** | TV Smart 55" en el grupo Dormitorios (ficha p. 5). | El plano (p. 4) dibuja un TV LED 32" junto a la mesa del comedor. |
 | **Vivienda 12 m – cocina** | Heladera en el rincón junto al baño y mesada de 1,10 m, mesa contra el muro. | El plano (p. 4) dibuja una mesada de 1,40 m y no dibuja la heladera. |
 | **Comedor 12 m** | Termotanque 40 L y heladera con freezer (ficha p. 8). | El plano (p. 7) indica termotanque 80 L y frigobar bajo. |
