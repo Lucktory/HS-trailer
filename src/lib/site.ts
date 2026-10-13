@@ -5,9 +5,9 @@ export const site = {
   description:
     "Alquiler, construcción y mantenimiento de trailers modulares habitacionales, comedores, oficinas y pañoles para campamentos de la industria en Patagonia.",
   url: "https://hstrailers.com.ar", // TODO: dominio definitivo
-  whatsapp: "5492990000000", // TODO: número real, formato internacional sin "+" ni espacios
-  phoneDisplay: "+54 9 299 000-0000", // TODO
-  email: "info@hstrailers.com.ar", // TODO
+  whatsapp: "5492974724063", // formato internacional sin "+" ni espacios
+  phoneDisplay: "+54 9 297 472-4063",
+  email: "info@hhstrailers.com",
   location: "Patagonia, Argentina", // TODO: ciudad / base operativa
   social: {
     instagram: "", // TODO: URL (se oculta si está vacío)
