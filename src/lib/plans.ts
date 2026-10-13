@@ -229,6 +229,7 @@ export const panol12: Plan = {
       w: 1110,
       h: 72,
       items: ["Estructura metálica", "Estantes de madera", "Altura de piso a techo"],
+      view: { x: 300, y: 140, lookX: 520, lookY: 20 },
     },
     {
       id: "pasillo",
@@ -238,6 +239,7 @@ export const panol12: Plan = {
       w: 1200,
       h: 100,
       items: ["Puertas originales de contenedor", "Pasillo central de circulación", "Iluminación interior"],
+      view: { x: -60, y: 122, lookX: 1200, lookY: 122 },
     },
     {
       id: "est-b",
@@ -247,15 +249,24 @@ export const panol12: Plan = {
       w: 1110,
       h: 72,
       items: ["Estructura metálica", "Estantes de madera", "Altura de piso a techo"],
+      view: { x: 300, y: 104, lookX: 520, lookY: 224 },
     },
   ],
   shapes: [
     { t: "gap", x: -5, y: 4, w: 10, h: 236 },
     { t: "door", x: 0, y: 4, w: 118, to: "left", flip: true },
     { t: "door", x: 0, y: 240, w: 118, to: "left" },
-    { t: "rect", x: 90, y: 6, w: 1100, h: 60 },
-    { t: "rect", x: 90, y: 178, w: 1100, h: 60 },
+    { t: "rect", x: 90, y: 6, w: 1100, h: 60, kind: "shelving" },
+    { t: "rect", x: 90, y: 178, w: 1100, h: 60, kind: "shelving" },
     ...shelfLines,
+  ],
+  // Equipo frio/calor en el testero opuesto a las puertas, centrado (foto del cliente).
+  // Luminarias: una fila en el eje como en la foto; cantidad y separacion aproximadas.
+  fixtures: [
+    { kind: "ac", x: 1200, y: 122 },
+    { kind: "lamp", x: 200, y: 122 },
+    { kind: "lamp", x: 600, y: 122 },
+    { kind: "lamp", x: 1000, y: 122 },
   ],
 };
 

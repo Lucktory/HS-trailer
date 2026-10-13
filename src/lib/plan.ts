@@ -1,6 +1,7 @@
 // Planos de planta: primitivas en centímetros (12 m = 1200 × 244, 6 m = 600 × 244).
 export type Shape =
-  | { t: "rect"; x: number; y: number; w: number; h: number; fill?: boolean }
+  // kind: que es el rectangulo en el recorrido 3D (sin kind se dibuja solo en el plano 2D)
+  | { t: "rect"; x: number; y: number; w: number; h: number; fill?: boolean; kind?: "shelving" }
   | { t: "line"; x1: number; y1: number; x2: number; y2: number }
   | { t: "circle"; cx: number; cy: number; r: number }
   | { t: "wall"; x1: number; y1: number; x2: number; y2: number }
@@ -21,6 +22,8 @@ export type Zone = {
   items: string[];
   mx?: number; // posición del número (por defecto, el centro de la zona)
   my?: number;
+  // Recorrido 3D: donde se para la camara (x, y) y hacia donde mira (lookX, lookY), en cm del plano
+  view?: { x: number; y: number; lookX: number; lookY: number };
 };
 
 export type Plan = {
@@ -29,6 +32,10 @@ export type Plan = {
   padLeft?: number; // margen extra si hay puertas que abren hacia afuera por la izquierda
   zones: Zone[];
   shapes: Shape[];
+  // Equipos solo para el recorrido 3D (el plano 2D no los dibuja). (x, y) en cm del plano:
+  // ac = equipo frio/calor colgado arriba, centrado en ese punto de un muro exterior;
+  // lamp = luminaria de techo sobre ese punto.
+  fixtures?: ({ kind: "ac"; x: number; y: number } | { kind: "lamp"; x: number; y: number })[];
 };
 
 
