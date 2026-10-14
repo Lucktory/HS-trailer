@@ -3,6 +3,7 @@ import {
   ArrowLeft,
   ArrowRight,
   CaretDown,
+  Cube,
   ChatCircleText,
   ClipboardText,
   Couch,
@@ -63,6 +64,7 @@ const icons = {
   hardhat: HardHat,
   grid: SquaresFour,
   caretDown: CaretDown,
+  cube: Cube,
   scroll: MouseScroll,
   snowflake: Snowflake,
   heat: ThermometerHot,
@@ -105,7 +107,7 @@ const STROKE: Record<IconWeight, number> = { thin: 0.75, light: 1.125, regular: 
 export type IconName = keyof typeof icons | keyof typeof lucideIcons;
 
 // Trazo fino ("light") para el estilo premium; flechas y controles un poco más firmes.
-const regular: IconName[] = ["arrow", "arrowLeft", "menu", "close", "skip", "soundOn", "soundOff"];
+const regular: IconName[] = ["arrow", "arrowLeft", "menu", "close", "skip", "soundOn", "soundOff", "cube"];
 
 export function Icon({ name, className = "size-6", weight }: { name: IconName; className?: string; weight?: IconWeight }) {
   const w = weight ?? (regular.includes(name) ? "regular" : "light");
