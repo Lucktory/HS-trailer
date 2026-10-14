@@ -115,7 +115,7 @@ export const units: UnitType[] = [
               "2 camas individuales por dormitorio",
               "4 colchones de 20 cm",
               "Mesa de luz compartida y velador individual",
-              "Armario individual con llave",
+              "Armario individual",
               "2 calefactores eléctricos por dormitorio",
               "2 aires acondicionados 3500 frigorías (1 por dormitorio)",
               TV,
@@ -124,7 +124,7 @@ export const units: UnitType[] = [
           {
             title: "Baño",
             icon: "shower",
-            items: ["Inodoro", "Bidet", "Lavamanos y espejo", "Ducha (receptáculo mínimo 90 cm)", "Cortina de baño", "Calefactor eléctrico"],
+            items: ["Inodoro", "Bidet", "Lavamanos y espejo", "Ducha (receptáculo mínimo 90 cm)", "Cortina de baño"],
           },
           {
             title: "Comedor",
@@ -134,7 +134,6 @@ export const units: UnitType[] = [
               "Dispenser",
               "Heladera con freezer",
               "Mesa móvil y 4 sillas",
-              "Aire acondicionado 3500 frigorías",
               "Calefactor eléctrico",
               "Termotanque 40 L con conexión al exterior",
             ],
@@ -267,7 +266,7 @@ export const units: UnitType[] = [
             items: ["4 duchas de 90 × 90 cm con receptáculo y puerta", "2 termotanques eléctricos de 150 L", "Extractor en cada box de ducha e inodoro"],
           },
           { title: "Vestuario", icon: "users", items: ["2 lockers metálicos de 6 casilleros", "3 bancos", "Percheros"] },
-          { title: "Climatización", icon: "heat", items: ["2 aires acondicionados 3500 frigorías", "4 calefactores eléctricos"] },
+          { title: "Climatización", icon: "heat", items: ["2 aires acondicionados 3500 frigorías"] },
           documentation,
         ],
         plan: plans.bano12,
@@ -282,7 +281,7 @@ export const units: UnitType[] = [
           { title: "Sanitarios", icon: "toilet", items: ["2 inodoros en boxes con puerta", "2 mingitorios con separador", "Mesada con 2 bachas y espejos"] },
           { title: "Duchas", icon: "shower", items: ["2 duchas de 90 × 90 cm con receptáculo y puerta", "Termotanque eléctrico de 150 L", "Extractor en cada box"] },
           { title: "Vestuario", icon: "users", items: ["Locker metálico de 6 casilleros", "Banco", "Percheros"] },
-          { title: "Climatización", icon: "heat", items: ["Aire acondicionado 3500 frigorías", "2 calefactores eléctricos"] },
+          { title: "Climatización", icon: "heat", items: ["Aire acondicionado 3500 frigorías"] },
           documentation,
         ],
         plan: plans.bano6,
@@ -304,7 +303,7 @@ export const units: UnitType[] = [
           {
             title: "Equipamiento",
             icon: "warehouse",
-            items: ["Estanterías en ambos laterales", "Estructura metálica y estantes de madera", "Pasillo central de circulación", "Iluminación interior"],
+            items: ["Estanterías en ambos laterales", "Estructura metálica y estantes de madera", "Pasillo central de circulación", "Iluminación interior", "Aire acondicionado"],
           },
           documentation,
         ],
@@ -320,7 +319,7 @@ export const units: UnitType[] = [
           {
             title: "Equipamiento",
             icon: "warehouse",
-            items: ["Estanterías en ambos laterales", "Estructura metálica y estantes de madera", "Pasillo central de circulación", "Iluminación interior"],
+            items: ["Estanterías en ambos laterales", "Estructura metálica y estantes de madera", "Pasillo central de circulación", "Iluminación interior", "Aire acondicionado"],
           },
           documentation,
         ],
@@ -415,7 +414,7 @@ export const units: UnitType[] = [
           {
             title: "Baño",
             icon: "shower",
-            items: ["Inodoro", "Bidet", "Lavamanos y espejo", "Ducha (receptáculo mínimo 90 cm)", "Cortina de baño", "Calefactor eléctrico"],
+            items: ["Inodoro", "Bidet", "Lavamanos y espejo", "Ducha (receptáculo mínimo 90 cm)", "Cortina de baño"],
           },
           {
             title: "Cocina",

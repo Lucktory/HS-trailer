@@ -15,7 +15,7 @@ export const vivienda12: Plan = {
       y: 0,
       w: 300,
       h: 244,
-      items: ["2 camas individuales", "Armario con llave", "2 calefactores eléctricos", "Aire acondicionado 3500 frigorías"],
+      items: ["2 camas individuales", "Armario", "2 calefactores eléctricos", "Aire acondicionado 3500 frigorías"],
     },
     {
       id: "bano",
@@ -24,7 +24,7 @@ export const vivienda12: Plan = {
       y: 0,
       w: 260,
       h: 150,
-      items: ["Inodoro y bidet", "Lavamanos con espejo", "Ducha (receptáculo 90 cm)", "Calefactor eléctrico"],
+      items: ["Inodoro y bidet", "Lavamanos con espejo", "Ducha (receptáculo 90 cm)"],
     },
     {
       id: "cocina",
@@ -44,7 +44,7 @@ export const vivienda12: Plan = {
       y: 0,
       w: 300,
       h: 244,
-      items: ["2 camas individuales", "Armario con llave", "2 calefactores eléctricos", "Aire acondicionado 3500 frigorías"],
+      items: ["2 camas individuales", "Armario", "2 calefactores eléctricos", "Aire acondicionado 3500 frigorías"],
     },
   ],
   shapes: [
@@ -238,7 +238,7 @@ export const panol12: Plan = {
       y: 72,
       w: 1200,
       h: 100,
-      items: ["Puertas originales de contenedor", "Pasillo central de circulación", "Iluminación interior"],
+      items: ["Puertas originales de contenedor", "Pasillo central de circulación", "Iluminación interior", "Aire acondicionado"],
       view: { x: -60, y: 122, lookX: 1200, lookY: 122 },
     },
     {
@@ -361,7 +361,7 @@ export const panol6: Plan = {
   padLeft: 170,
   zones: [
     { id: "est-a", label: "Estantería lateral A", x: 90, y: 0, w: 510, h: 72, items: ["Estructura metálica", "Estantes de madera", "Altura de piso a techo"] },
-    { id: "pasillo", label: "Pasillo y acceso", x: 0, y: 72, w: 600, h: 100, items: ["Puertas originales de contenedor", "Pasillo central de circulación", "Iluminación interior"] },
+    { id: "pasillo", label: "Pasillo y acceso", x: 0, y: 72, w: 600, h: 100, items: ["Puertas originales de contenedor", "Pasillo central de circulación", "Iluminación interior", "Aire acondicionado"] },
     { id: "est-b", label: "Estantería lateral B", x: 90, y: 172, w: 510, h: 72, items: ["Estructura metálica", "Estantes de madera", "Altura de piso a techo"] },
   ],
   shapes: [
@@ -395,10 +395,10 @@ export const bano12: Plan = {
   length: 1200,
   width: 244,
   zones: [
-    { id: "inodoros", label: "Inodoros y mingitorios", x: 0, y: 0, w: 360, h: 244, mx: 135, my: 180, items: ["4 inodoros en boxes con puerta", "4 mingitorios con separadores", "Extractor en cada box", "Calefactor eléctrico"] },
-    { id: "duchas", label: "Duchas y lavamanos", x: 360, y: 0, w: 360, h: 244, mx: 540, my: 178, items: ["4 duchas 90 × 90 cm con puerta", "Mesada con 5 bachas y espejos", "Dispensers de jabón y toallas", "Aire 3500 frigorías y calefactor eléctrico"] },
+    { id: "inodoros", label: "Inodoros y mingitorios", x: 0, y: 0, w: 360, h: 244, mx: 135, my: 180, items: ["4 inodoros en boxes con puerta", "4 mingitorios con separadores", "Extractor en cada box", "Aire acondicionado"] },
+    { id: "duchas", label: "Duchas y lavamanos", x: 360, y: 0, w: 360, h: 244, mx: 540, my: 178, items: ["4 duchas 90 × 90 cm con puerta", "Mesada con 5 bachas y espejos", "Dispensers de jabón y toallas"] },
     { id: "tecnica", label: "Acceso y sala técnica", x: 720, y: 0, w: 130, h: 244, items: ["2 termotanques eléctricos de 150 L", "Ingreso principal", "Paso al vestuario"] },
-    { id: "vestuario", label: "Vestuario", x: 850, y: 0, w: 350, h: 244, mx: 1100, my: 180, items: ["2 lockers metálicos de 6 casilleros", "3 bancos y percheros", "Aire 3500 frigorías y 2 calefactores eléctricos"] },
+    { id: "vestuario", label: "Vestuario", x: 850, y: 0, w: 350, h: 244, mx: 1100, my: 180, items: ["2 lockers metálicos de 6 casilleros", "3 bancos y percheros", "Aire acondicionado"] },
   ],
   shapes: [
     // Boxes de inodoro y de ducha
@@ -442,9 +442,9 @@ export const bano6: Plan = {
   width: 244,
   zones: [
     { id: "inodoros", label: "Inodoros y mingitorios", x: 0, y: 0, w: 180, h: 244, mx: 90, my: 182, items: ["2 inodoros en boxes con puerta", "2 mingitorios con separador", "Extractor en cada box"] },
-    { id: "duchas", label: "Duchas y lavamanos", x: 180, y: 0, w: 180, h: 244, mx: 270, my: 178, items: ["2 duchas 90 × 90 cm con puerta", "Mesada con 2 bachas y espejos", "Calefactor eléctrico"] },
+    { id: "duchas", label: "Duchas y lavamanos", x: 180, y: 0, w: 180, h: 244, mx: 270, my: 178, items: ["2 duchas 90 × 90 cm con puerta", "Mesada con 2 bachas y espejos"] },
     { id: "tecnica", label: "Acceso y sala técnica", x: 360, y: 0, w: 90, h: 244, items: ["Termotanque eléctrico de 150 L", "Ingreso principal", "Paso al vestuario"] },
-    { id: "vestuario", label: "Vestuario", x: 450, y: 0, w: 150, h: 244, items: ["Locker metálico de 6 casilleros", "Banco y percheros", "Aire 3500 frigorías y calefactor eléctrico"] },
+    { id: "vestuario", label: "Vestuario", x: 450, y: 0, w: 150, h: 244, items: ["Locker metálico de 6 casilleros", "Banco y percheros", "Aire acondicionado"] },
   ],
   shapes: [
     { t: "wall", x1: 90, y1: 0, x2: 90, y2: 100 },
@@ -540,7 +540,7 @@ export const companyMan12: Plan = {
   zones: [
     { id: "oficina", label: "Oficina", x: 0, y: 0, w: 560, h: 244, items: ["3 escritorios con sillas ergonómicas", "Muebles de guardado y archivero", "Aire 3500 frigorías y calefactor eléctrico"] },
     { id: "cocina", label: "Cocina", x: 560, y: 0, w: 181, h: 244, mx: 640, my: 200, items: ["Mesada con pileta y anafe", "Heladera con freezer", "Microondas y dispenser"] },
-    { id: "bano", label: "Baño completo", x: 741, y: 0, w: 99, h: 177, items: ["Ducha", "Inodoro y bidet", "Lavamanos con espejo", "Calefactor eléctrico"] },
+    { id: "bano", label: "Baño completo", x: 741, y: 0, w: 99, h: 177, items: ["Ducha", "Inodoro y bidet", "Lavamanos con espejo"] },
     { id: "dormitorio", label: "Dormitorio", x: 840, y: 0, w: 360, h: 244, items: ["Cama doble con colchón de 20 cm", "2 mesas de luz", "Placard", "Aire 3500 frigorías y 2 calefactores eléctricos"] },
   ],
   shapes: [
