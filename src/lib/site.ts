@@ -7,7 +7,7 @@ export const site = {
   url: "https://hstrailers.com.ar", // TODO: dominio definitivo
   whatsapp: "5492974724063", // formato internacional sin "+" ni espacios
   phoneDisplay: "+54 9 297 472-4063",
-  email: "info@hhstrailers.com",
+  email: "admin@hstrailers.com.ar",
   location: "Patagonia, Argentina", // TODO: ciudad / base operativa
   social: {
     instagram: "", // TODO: URL (se oculta si está vacío)
